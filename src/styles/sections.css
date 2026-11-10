@@ -26,7 +26,7 @@
 .hero__line--1 { padding-left: 8.4vw; }
 .char {
   display: inline-block; overflow: hidden; vertical-align: top;
-  padding-top: 0.14em; margin-top: -0.14em;
+  padding-top: 0.26em; margin-top: -0.26em;
   font-variation-settings: 'wdth' 106, 'wght' 700;
 }
 .char__in { display: inline-block; will-change: transform; transform-origin: 0 100%; }

@@ -96,9 +96,10 @@
 .menu.is-open { clip-path: inset(0 0 0 0); visibility: visible; transition: clip-path 0.9s var(--ease-io), visibility 0s; }
 .menu__list { display: flex; flex-direction: column; }
 .menu__list li { border-bottom: 1px solid var(--line); overflow: hidden; }
+.menu__link .mono { flex: none; }
 .menu__link {
   display: flex; align-items: baseline; gap: 14px; padding: 14px 0;
-  font-size: clamp(40px, 13vw, 84px);
+  font-size: min(9.8vw, 76px); font-variation-settings: 'wdth' 98; letter-spacing: -0.03em; line-height: 1.1;
   transform: translateY(110%); transition: transform 0.9s var(--ease-out);
   transition-delay: calc(var(--i) * 60ms + 150ms);
 }
@@ -158,7 +159,7 @@
 
 /* ——— Som: convite de entrada ——— */
 .invite {
-  position: fixed; right: var(--gutter); bottom: clamp(14px, 2.2vh, 28px); z-index: 58;
+  position: fixed; right: var(--gutter); bottom: clamp(14px, 2.2vh, 28px); z-index: 54; /* abaixo do menu em tela cheia */
   display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px 14px;
   width: min(340px, calc(100vw - 2 * var(--gutter))); padding: 16px 18px; border-radius: 16px;
   background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
