@@ -14,8 +14,8 @@ export const contact = {
   email: 'devdavigomes@gmail.com',
   whatsappLabel: '(21) 99500-6549',
   whatsapp: 'https://wa.me/5521995006549',
-  github: 'https://github.com/devdavigomes-sudo',
-  githubLabel: 'devdavigomes-sudo',
+  github: 'https://github.com/davidevgomes',
+  githubLabel: 'davidevgomes',
   linkedin: '', // cole aqui a URL do LinkedIn para o canal aparecer no site
   linkedinLabel: '',
 }
