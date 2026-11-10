@@ -34,9 +34,10 @@ export const about = {
     'Hoje projeto e construo sistemas inteiros: do servidor à interface.',
   ],
   paragraphs: [
-    'Sou Davi Gomes Araújo, desenvolvedor de software. Minha trajetória na tecnologia começou pela infraestrutura e manutenção de computadores, evoluindo para o desenvolvimento de sistemas, aplicações e soluções digitais.',
+    'Sou Davi Gomes Araújo, tenho 20 anos e sou desenvolvedor de software. Minha trajetória na tecnologia começou pela infraestrutura e manutenção de computadores — na escola, no curso e consertando os computadores de casa — e evoluiu para o desenvolvimento de sistemas, aplicações e soluções digitais.',
     'Ao longo dessa jornada, trabalhei em projetos institucionais que resolveram problemas reais, desenvolvi aplicações próprias e explorei diferentes tecnologias para transformar ideias em produtos funcionais.',
     'Tenho especial interesse em desenvolvimento de software, automação de processos, inteligência artificial e experiências digitais.',
+    'Sou cristão e apaixonado pela palavra de Deus.',
   ],
   education: [
     { title: 'Engenharia de Software', place: 'Universidade de Vassouras', note: 'Em andamento' },
