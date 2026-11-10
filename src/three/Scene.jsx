@@ -16,10 +16,10 @@ function Studio({ theme }) {
         <sphereGeometry args={[1, 24, 24]} />
         <meshBasicMaterial color={paper ? '#a9a49c' : '#070304'} side={THREE.BackSide} />
       </mesh>
-      <Lightformer form="rect" intensity={paper ? 9 : 7} position={[0, 6, -1]} rotation-x={Math.PI / 2} scale={[11, 4, 1]} />
+      <Lightformer form="rect" intensity={paper ? 9 : 3} position={[0, 6, -1]} rotation-x={Math.PI / 2} scale={paper ? [11, 4, 1] : [9, 2.2, 1]} />
       <Lightformer form="rect" intensity={paper ? 5 : 3.2} position={[-7, 1, 3]} rotation-y={Math.PI / 2} scale={[3, 9, 1]} />
       <Lightformer form="rect" intensity={paper ? 3 : 3.4} color="#ff1f4b" position={[7, -1, 2]} rotation-y={-Math.PI / 2} scale={[2.2, 7, 1]} />
-      <Lightformer form="ring" intensity={paper ? 6 : 4} position={[1, -5, 4]} rotation-x={-Math.PI / 2.4} scale={3.4} />
+      <Lightformer form="ring" intensity={paper ? 6 : 2.6} position={[1, -5, 4]} rotation-x={-Math.PI / 2.4} scale={3.4} />
       <Lightformer form="rect" intensity={2} color={paper ? '#ffffff' : '#9db8ff'} position={[3, 3, 8]} scale={[5, 0.8, 1]} />
       <Lightformer form="rect" intensity={paper ? 4 : 1.4} position={[-3, -2, 9]} scale={[1, 5, 1]} />
     </Environment>

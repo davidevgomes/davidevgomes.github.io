@@ -7,3 +7,4 @@ dist/
 # Ficam só na máquina local; o site usa as versões tratadas em public/img.
 assets-src/
 .mobile-check/
+

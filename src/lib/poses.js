@@ -14,7 +14,7 @@ export const basePose = { x: 0, y: 0, s: 1, rx: 0.4, ry: 0, rz: 0, explode: 0, t
 const P = {
   home: (p, m) =>
     m
-      ? { x: 0.26, y: 0.4, s: 0.8, rx: 0.5, ry: -0.6, rz: 0.16, explode: 0.1, twist: 0.6 }
+      ? { x: 0.12, y: heroFit.y, s: heroFit.s, rx: 0.5, ry: -0.6, rz: 0.16, explode: 0.1, twist: 0.6 }
       : { x: 0.6, y: 0.03, s: 0.82, rx: 0.46, ry: -0.6, rz: 0.16, explode: 0.1, twist: 0.6 },
   about: (p, m) =>
     m
@@ -22,13 +22,13 @@ const P = {
       : { x: 1.02, y: 0.05 - p * 0.1, s: 1.0, rx: 1.05, ry: 0.4 + p * 1.4, rz: -0.25, explode: 0.3, twist: 0.25, spin: 0.4 },
   expertise: (p, m) =>
     m
-      ? { x: 0.86, y: 0.05, s: 0.5, rx: 0.3, ry: -0.5 + p * 1.2, explode: 1, twist: 0.12, ghost: 0.7, spin: 0.25 }
+      ? { x: 0.9, y: 0.05, s: 0.46, rx: 0.3, ry: -0.5 + p * 1.2, explode: 1, twist: 0.12, ghost: 0.7, spin: 0.25 }
       : { x: 0.56, y: -0.02, s: 0.78, rx: 0.3, ry: -0.6 + p * 1.1, explode: 0.9, twist: 0.12, ghost: 0.75, spin: 0.25 },
   work: () => ({ x: 1.3, y: 0.9, s: 0.4, rx: 1.2, ry: 2, presence: 0 }),
   approach: (p, m) => ({
-    x: m ? 0.86 : 0.6,
+    x: m ? 0.9 : 0.6,
     y: 0,
-    s: m ? 0.5 : 0.84,
+    s: m ? 0.44 : 0.84,
     rx: 0.36,
     ry: -0.8 + p * 2.4,
     explode: 0.75 - 0.7 * smooth(clamp(p * 1.25 - 0.25)),
@@ -46,10 +46,23 @@ const P = {
 let stops = []
 let vh = 1
 let portrait = false
+// No celular, o objeto do hero ocupa o espaço livre entre a barra do topo e o nome (medido no layout real).
+let heroFit = { y: 0.45, s: 0.6 }
 
 export function measurePoses() {
   vh = innerHeight
   portrait = innerWidth / innerHeight < 0.85
+  const title = document.querySelector('.hero__title')
+  if (title && portrait) {
+    const top = 70
+    const titleTop = title.getBoundingClientRect().top + scrollY
+    const free = Math.max(120, titleTop - top)
+    const unit = Math.min(vh, innerWidth * 1.2) * 0.3 // mesma unidade usada pela cena, em pixels
+    heroFit = {
+      y: 1 - (2 * (top + free * 0.5)) / vh,
+      s: Math.min(0.9, Math.max(0.34, Math.min((free * 0.8) / (2.5 * unit), (innerWidth * 0.78) / (2.6 * unit)))),
+    }
+  }
   stops = [...document.querySelectorAll('[data-pose]')].map((el) => {
     const r = el.getBoundingClientRect()
     const top = r.top + scrollY

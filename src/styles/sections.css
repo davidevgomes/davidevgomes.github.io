@@ -171,8 +171,8 @@
   .expertise__sticky { position: static; height: auto; padding: 0; }
   .expertise__body { display: block; }
   .expertise__intro h2 { font-size: clamp(40px, 12vw, 80px); }
-  .expertise__intro .body { max-width: 30ch; }
-  .layers { margin-top: 36px; max-width: min(64%, 520px); }
+  .expertise__intro .body { max-width: min(62%, 30ch); }
+  .layers { margin-top: 36px; max-width: min(62%, 520px); }
   .layer__items li { font-size: 10px; padding: 5px 8px; }
   .layer__panel { grid-template-rows: 1fr; }
   .layer__inner { padding-left: 0; }
@@ -216,7 +216,8 @@
 
 @media (max-width: 960px) {
   .approach__note { grid-column: 1 / -1; position: static; margin-bottom: 36px; max-width: 30ch; }
-  .steps { grid-column: 1 / -1; max-width: min(68%, 560px); }
+  .steps { grid-column: 1 / -1; max-width: min(64%, 560px); }
+  .step__verb { font-size: clamp(21px, 6.2vw, 44px); }
 }
 @media (max-width: 560px) {
   .steps { padding-left: 28px; }
