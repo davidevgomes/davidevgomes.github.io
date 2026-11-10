@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.claude/
+*.log
+
+# Originais das imagens: incluem capturas internas sem desfoque (nomes e posições de terceiros).
+# Ficam só na máquina local; o site usa as versões tratadas em public/img.
+assets-src/

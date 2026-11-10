@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="vinho">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Davi Gomes Araújo — Engenheiro de Software & Desenvolvedor Criativo</title>
+    <meta
+      name="description"
+      content="Portfólio de Davi Gomes Araújo, engenheiro de software e creative developer. Sistemas, produtos e experiências digitais que resolvem problemas reais — do servidor à interface."
+    />
+    <meta name="author" content="Davi Gomes Araújo" />
+    <meta name="theme-color" content="#0c0608" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Davi Gomes Araújo — Engenheiro de Software & Desenvolvedor Criativo" />
+    <meta property="og:description" content="Transformo ideias em experiências digitais. Sistemas públicos, produtos próprios e experiências 3D." />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Aplica o tema salvo antes da primeira pintura (evita flash).
+      try {
+        var t = localStorage.getItem('dga-theme')
+        if (t === 'papel' || t === 'vinho') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+    <style>
+      html { background: #0c0608; }
+      html[data-theme='papel'] { background: #ebe9e4; }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Davi Gomes Araújo",
+        "jobTitle": "Software Engineer & Creative Developer",
+        "email": "mailto:devdavigomes@gmail.com",
+        "sameAs": ["https://github.com/devdavigomes-sudo"],
+        "alumniOf": ["Universidade de Vassouras", "Instituto Federal Fluminense — Campus Maricá"],
+        "knowsAbout": ["Software Engineering", "React", "Node.js", "Python", "Three.js", "Artificial Intelligence", "Infrastructure"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 2rem; font-family: sans-serif; color: #f1e9e4">
+        Davi Gomes Araújo — Engenheiro de Software & Desenvolvedor Criativo. Contato: devdavigomes@gmail.com
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

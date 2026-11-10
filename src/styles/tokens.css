@@ -1,0 +1,51 @@
+/* Tokens de design — dois modos: VINHO (escuro, padrão) e PAPEL (claro). */
+:root {
+  --f-display: 'Archivo Variable', 'Arial Narrow', system-ui, sans-serif;
+  --f-serif: 'Instrument Serif', 'Times New Roman', serif;
+  --f-mono: var(--f-display); /* rótulos pequenos: Archivo (a monoespaçada foi removida) */
+
+  --gutter: clamp(16px, 2.4vw, 44px);
+  --section-gap: clamp(96px, 16vh, 220px);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Dashpoint (identidade própria do produto) */
+  --dp-noite: #0b1d2a;
+  --dp-sol: #ff6b35;
+  --dp-areia: #f4efe6;
+}
+
+:root,
+[data-theme='vinho'] {
+  color-scheme: dark;
+  --bg: #0c0608;
+  --bg-2: #14090c;
+  --bg-3: #1d0d12;
+  --ink: #f1e9e4;
+  --ink-2: #b9aaa5;
+  --ink-3: #7d6d6a;
+  --line: rgba(241, 233, 228, 0.13);
+  --line-strong: rgba(241, 233, 228, 0.32);
+  --accent: #f0214a;
+  --accent-ink: #fff4f1;
+  --wine: #5c0a1c;
+  --wine-deep: #2a050d;
+  --shadow: rgba(0, 0, 0, 0.55);
+}
+
+[data-theme='papel'] {
+  color-scheme: light;
+  --bg: #ebe9e4;
+  --bg-2: #e2dfd8;
+  --bg-3: #d6d2c9;
+  --ink: #100c0c;
+  --ink-2: #4c4543;
+  --ink-3: #857c78;
+  --line: rgba(16, 12, 12, 0.13);
+  --line-strong: rgba(16, 12, 12, 0.34);
+  --accent: #c20f33;
+  --accent-ink: #fff4f1;
+  --wine: #5c0a1c;
+  --wine-deep: #e0d6d3;
+  --shadow: rgba(60, 20, 20, 0.22);
+}
