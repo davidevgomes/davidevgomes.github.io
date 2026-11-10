@@ -14,7 +14,7 @@ export const basePose = { x: 0, y: 0, s: 1, rx: 0.4, ry: 0, rz: 0, explode: 0, t
 const P = {
   home: (p, m) =>
     m
-      ? { x: 0.3, y: 0.28, s: 0.9, rx: 0.5, ry: -0.6, rz: 0.16, explode: 0.1, twist: 0.6 }
+      ? { x: 0.26, y: 0.4, s: 0.8, rx: 0.5, ry: -0.6, rz: 0.16, explode: 0.1, twist: 0.6 }
       : { x: 0.6, y: 0.03, s: 0.82, rx: 0.46, ry: -0.6, rz: 0.16, explode: 0.1, twist: 0.6 },
   about: (p, m) =>
     m
@@ -22,13 +22,13 @@ const P = {
       : { x: 1.02, y: 0.05 - p * 0.1, s: 1.0, rx: 1.05, ry: 0.4 + p * 1.4, rz: -0.25, explode: 0.3, twist: 0.25, spin: 0.4 },
   expertise: (p, m) =>
     m
-      ? { x: 0.84, y: 0.05, s: 0.62, rx: 0.3, ry: -0.5 + p * 1.2, explode: 1, twist: 0.12, ghost: 0.7, spin: 0.25 }
+      ? { x: 0.86, y: 0.05, s: 0.5, rx: 0.3, ry: -0.5 + p * 1.2, explode: 1, twist: 0.12, ghost: 0.7, spin: 0.25 }
       : { x: 0.56, y: -0.02, s: 0.78, rx: 0.3, ry: -0.6 + p * 1.1, explode: 0.9, twist: 0.12, ghost: 0.75, spin: 0.25 },
   work: () => ({ x: 1.3, y: 0.9, s: 0.4, rx: 1.2, ry: 2, presence: 0 }),
   approach: (p, m) => ({
-    x: m ? 0.74 : 0.6,
+    x: m ? 0.86 : 0.6,
     y: 0,
-    s: m ? 0.72 : 0.84,
+    s: m ? 0.5 : 0.84,
     rx: 0.36,
     ry: -0.8 + p * 2.4,
     explode: 0.75 - 0.7 * smooth(clamp(p * 1.25 - 0.25)),
@@ -39,7 +39,7 @@ const P = {
   }),
   contact: (p, m) =>
     m
-      ? { x: 0.3, y: -0.5, s: 0.85, rx: 0.6, ry: 0.8, rz: 0.12, explode: 0.06, twist: 0.9 }
+      ? { x: 0.72, y: 0.66 + p * 1.6, s: 0.4, rx: 0.6, ry: 0.8, rz: 0.12, explode: 0.06, twist: 0.9 }
       : { x: 0.66, y: -0.3, s: 0.84, rx: 0.52, ry: 0.9, rz: 0.12, explode: 0.06, twist: 0.9 },
 }
 

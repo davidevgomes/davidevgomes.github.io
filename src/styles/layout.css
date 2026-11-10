@@ -175,7 +175,14 @@
 .invite__no { grid-column: 1 / -1; justify-self: center; padding: 4px 8px; color: var(--ink-3); }
 .invite__no:hover { color: var(--ink); }
 @media (max-width: 860px) {
-  .invite { bottom: 84px; left: var(--gutter); right: auto; }
+  .invite { bottom: 78px; left: var(--gutter); right: var(--gutter); width: auto; grid-template-columns: auto 1fr auto auto; padding: 10px 12px; border-radius: 999px; gap: 10px; }
+  .invite__text span { display: none; }
+  .invite__text strong { font-size: 13px; }
+  .invite__yes { grid-column: auto; padding: 10px 14px; }
+  .invite__no { grid-column: auto; padding: 6px 4px; }
+  .theme span { display: none; }
+  .theme { padding: 10px; }
+  .topbar__right { gap: 6px; }
   .sound__toggle > span:last-child { display: none; }
   .sound__toggle { padding-right: 2px; }
 }

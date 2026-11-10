@@ -8,6 +8,7 @@ html {
   background: var(--bg);
   scrollbar-color: var(--line-strong) transparent;
   scrollbar-width: thin;
+  overflow-x: clip; /* nada pode alargar a página no celular */
 }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }

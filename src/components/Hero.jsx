@@ -64,13 +64,6 @@ export default function Hero({ ready }) {
 
   return (
     <section id="home" className="hero" data-pose="home" ref={root} aria-label="Introdução">
-      <div className="hero__top">
-        <p className="mono dim hero__loc" data-in>
-          {profile.location}
-          <br />
-          {profile.coords}
-        </p>
-      </div>
 
       <h1 className="hero__title" aria-label={profile.name}>
         {LINES.map((line, li) => (

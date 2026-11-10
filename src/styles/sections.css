@@ -53,7 +53,8 @@
 @keyframes drop { from { transform: translateY(-100%); } to { transform: translateY(200%); } }
 
 @media (max-width: 760px) {
-  .hero__title { font-size: min(24.4vw, 19.5svh); }
+  .hero__title { font-size: min(19.6vw, 17svh); }
+  .hero { padding-bottom: 96px; }
   .hero__line--1 { padding-left: 0; }
   .hero__foot { grid-template-columns: 1fr; row-gap: 14px; }
   .hero__role, .hero__tag { grid-column: 1; }
@@ -171,7 +172,8 @@
   .expertise__body { display: block; }
   .expertise__intro h2 { font-size: clamp(40px, 12vw, 80px); }
   .expertise__intro .body { max-width: 30ch; }
-  .layers { margin-top: 36px; max-width: min(68%, 520px); }
+  .layers { margin-top: 36px; max-width: min(64%, 520px); }
+  .layer__items li { font-size: 10px; padding: 5px 8px; }
   .layer__panel { grid-template-rows: 1fr; }
   .layer__inner { padding-left: 0; }
   .layer__head { grid-template-columns: 34px 1fr; }
@@ -214,7 +216,7 @@
 
 @media (max-width: 960px) {
   .approach__note { grid-column: 1 / -1; position: static; margin-bottom: 36px; max-width: 30ch; }
-  .steps { grid-column: 1 / -1; max-width: min(70%, 560px); }
+  .steps { grid-column: 1 / -1; max-width: min(68%, 560px); }
 }
 @media (max-width: 560px) {
   .steps { padding-left: 28px; }
@@ -254,4 +256,8 @@
   .channels { max-width: none; }
   .channel__link { grid-template-columns: 1fr auto; row-gap: 4px; }
   .channel__label { grid-column: 1 / -1; }
+  .channel__value { font-size: clamp(15px, 4.4vw, 30px); }
+  .channel__arrow { display: none; }
+  .channel__copy { margin-left: 10px; }
+  .contact__title { font-size: clamp(40px, 12.4vw, 96px); }
 }
